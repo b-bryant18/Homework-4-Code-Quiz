@@ -16,22 +16,40 @@
 </head>
 
 <body>
-    <div class="quizbox">
+    <div class="container">
+        <div class="Welcome">
 
+            <div class="jumbotron">
+                <h1 class="display-4">The Mandalorian Quiz Challenge!</h1>
+                <p class="lead"> Try answering the following questions within the time limit. </p>
+                <hr class="my-4">
+                <p>Incorrect answers will reduce your score/time by ten seconds!</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Start Quiz</a>
+            </div>
 
-        <div class="jumbotron">
-            <h1 class="display-4">The Mandalorian Quiz Challenge!</h1>
-            <p class="lead"> Try answering the following questions within the time limit. </p>
-            <hr class="my-4">
-            <p>Incorrect answers will reduce your score/time by ten seconds!</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Start Quiz</a>
-        </div>
-
-        
-
+            <div id="quiz-area">
+                
+            </div>
+        <!-- </div>
+        <div id="questionPrompt">
+        <h3 id="questionTitle"></h3>
+        <hr>
+        <button type="button" class="btn btn-primary" id="answer1"></button>
+        <button type="button" class="btn btn-primary" id="answer2"></button>
+        <button type="button" class="btn btn-primary" id="answer3"></button>
+        <button type="button" class="btn btn-primary" id="answer4"></button>
+        <hr>
+        </div> -->
+    </div>
+    <!-- <div id="ending">
+        <h3>Thanks for playing</h3>
+        <div id="quiz"></div>
+        <button id="submit">Submit Quiz</button>
+        <div id="results"></div>
+    </div> -->
     </div>
 
-    <script src="Quiz.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -41,6 +59,47 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+    </script>
+    <script src="Quiz.js"></script>
 </body>
 
 </html>
+
+<!-- Mr. Scott's Office hours notes -->
+
+<!-- var roundTime = 5000;
+
+var activeQuestion;
+var countdownId;
+function startGame () {
+    activeQuestion = someQuestions [Math.floor(Math.random() * someQuestions)]
+    activeQuestion = someQuestions[0];
+    $("#question").text(activeQuestion.q);
+    countdownId = setTimeout(function () {
+        alert ("Time's up");
+        if (activeQuestion.a === "t") {
+            alert("That was true");
+        else
+            alert("That was false");
+        }
+        window.location.reload();
+    }, roundTime)
+}
+
+function answerTrue() {
+    clearTimeout(countdownId);
+    alert("That's true");
+    console.log(activeQuestion.a);
+    if (activeQuestion.a === "t");
+}   else {
+    alert("That's correct");
+}
+    index++;
+    startGame(0;)
+}
+
+
+
+startGame (); -->

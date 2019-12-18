@@ -1,118 +1,97 @@
+// Buttons
+var welcome = document.getElementById("Welcome");
+var startButton = document.querySelector("#play");
+var questionTitle = document.getElementById("questionTitle");
+var questionPrompt = document.getElementById("questionPrompt");
+var card = $("#quiz-area");
+var answer1 = document.getElementById("answer1");
+var answer2 = document.getElementById("answer2");
+var answer3 = document.getElementById("answer3");
+var answer4 = document.getElementById("answer4");
+
+// Questions 
 var questions = [
     {
-        question: "The Mandalorian's armor is made of what material?",
-        choices: {
-            a: "Steel",
-            b: "Titanium",
-            c: "Cobalt",
-            d: "Beskar"
-        },
-        correctAnswer: "b"
+        title: "The Mandalorian's armor is made of what material?",
+        choices: ["Steel", "Titanium", "Cobalt", "Beskar"],
+        answer: "Beskar"
     },
     {
-        question: "Would you give your life for Baby Yoda?",
-        choices: {
-            a: "Absolutely",
-            b: "Nope",
-            c: "I wanna live",
-            d: "Nah"
-        },
-        correctAnswer: "Absolutely"
+        title: "What weapon does the Mandalorian have on his left wrist?",
+        choices: ["Knife", "Flamethrower", "Taser", "Blaster"],
+        answer: "Flamethrower"
     },
     {
-        question: "What weapon does the Mandalorian have on his left wrist?",
-        choices: {
-            a: "Knife",
-            b: "Flamethrower",
-            c: "Taser",
-            d: "A blaster"
-        },
-        correctAnswer: "Flamethrower"
+        title: "What is the moral code of the Mandalorians?",
+        choices: ["I gotta get me one of those", "Rangers Lead the Way", "Get some", "This is the way"],
+        answer: "This is the way"
     },
     {
-        question: "What is the Mandalorian's moral code?",
-        choices: {
-            a: "Hooyah",
-            b: "Rangers Lead the Way",
-            c: "Get some",
-            d: "This is the way"
-        },
-        correctAnswer: "This is the way"
+        title: "Who does Mando hunt down in order to retrieve his stolen spaceship parts?",
+        choices: ["Jawas", "Tusken Raiders", "Stormtroopers", "Jedi"],
+        answer: "Jawas"
     },
     {
-        question: "Who does Mando hunt down in order to get his stolen spaceship parts back from?",
-        choices:  {
-            a: "Jawas",
-            b: "Tusken Raiders",
-            c: "Stormtroopers",
-            d: "Jedi"
-        },
-        correctAnswer: "Jawas"
-    },
-    {
-        question: "How many years post-Empire does the Mandalorian take place?",
-        choices:  {
-            a: "28",
-            b: "11",
-            c: "20",
-            d: "5"
-        },
-        correctAnswer: "5"
-    },
-    {
-        question: "What are the Mandalorians known for?",
-        choices:  {
-            a: "Pod-racing",
-            b: "Smuggling",
-            c: "Bounty hunting",
-            d: "Blue milk"
-        },
-        correctAnswer: "Bounty hunting"
-    },
-    {
-        question: "What group is Mando a part of?",
-        choices:  {
-            a: "The First Order",
-            b: "The Guild",
-            c: "The Mos Eisley Cantina Band",
-            d: "Jabba The Hutt's Gang"
-        },
-        correctAnswer: "The Guild"
-    },
-    {
-        question: "Who does the Empire want Mando to find for them?",
-        choices:  {
-            a: "Kylo Ren",
-            b: "Greedo",
-            c: "Baby Yoda",
-            d: "Wicket the Ewok"
-        },
-        correctAnswer: "Baby Yoda"
-    },
-    {
-        question: "What character threatens to initiate self-destruct in episode 1?",
-        choices:  {
-            a: "IG-11, the assasin droid",
-            b: "Yub Nub",
-            c: "Bossk",
-            d: "Boba Fett"
-        },
-        correctAnswer: "IG-11"
-    },
-    {
-        question: "What can't a Mandalorian do?",
-        choices:  {
-            a: "Work with others",
-            b: "Kill enemies",
-            c: "Remove his helmet",
-            d: "Shoot first"
-        },
-        correctAnswer: "Remove his helmet"
+        title: "What are the Mandalorians known for?",
+        choices: ["Pod-racing", "Smuggling", "Bounty hunting", "Blue milk"],
+        answer: "Bounty hunting"
     },
 ]
+    // Display functions
+$(document).ready(function () {
+    // questionPrompt.style.display = "none";
+    // ending.style.display = "none";
 
-var score = 0;
+    // Start button function
 
-for (var i = 0; i < questions.length; i++) {
-    var response = w
-}
+    $("#start-btn").on("click", function () {
+        welcome.style.display = "none";
+        questionPrompt.style.display = "block";
+
+        questionTitle.textContent = questions[i].question;
+        answer1.textContent = questionns[0].choices[0];
+        answer2.textContent = questions[0].choices[1];
+        answer3.textContent = questions[0].choices[2];
+        answer4.textContent = questions[0].choices[3];
+    });
+
+    for (var i = 0; i < questions.length; i ++) {
+
+        var currentQuestion = questions[i];
+        card.append("<h1>" + currentQuestion.title + "</h1>");
+        card.append("<button type='submit'>" +currentQuestion.choices[0] + "</button>")
+        card.append("<button type='submit'>" +currentQuestion.choices[1] + "</button>")
+        card.append("<button type='submit'>" +currentQuestion.choices[2] + "</button>")
+        card.append("<button type='submit'>" +currentQuestion.choices[3] + "</button>")
+    
+        // questionTitle.textContent = currentQuestion.title; 
+        // console.log (currentQuestion);
+
+        // answer1.textContent = currentQuestion.choices[0];
+        // answer2.textContent = currentQuestion.choices[1];
+        // answer3.textContent = currentQuestion.choices[2];
+        // answer4.textContent = currentQuestion.choices[3];
+       
+        // for (var j = 0; j <currentQuestion.choices.length; j ++) {
+        //     console.log (currentQuestion.choices[j]);
+        //     answer1.textContent = currentQuestion.choices[j];
+        // }
+    }
+
+    // // Next question function
+    // nextQuestion();
+
+    // function nextQuestion() {
+    //     $(".btn-block").on("click"), function () {
+    //         currentQuestion++;
+    //         if (currentQuestion);
+    //     }
+    // }
+    // for (var i = 0; i < questions.length; i++) {
+    //     // console.log(questions[i]);
+
+    // }
+})
+
+    // How do I make the start quiz btn take me to the first question?
+    // How do I get the first question to appear without showing answers?
