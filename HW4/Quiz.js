@@ -65,7 +65,7 @@ $(document).ready(function () {
         card.append("<button type='submit'>" + currentQuestion.choices[3] + "</button>")
 
         //Functions for when correct answers are chosen by user.
-        function checkAnswer(answer) {
+        function checkAnswer(choices) {
             if (answer === questions[currentQuestion].correct) {
                 //answer is right
                 answerCorrect();
