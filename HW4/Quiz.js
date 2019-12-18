@@ -110,7 +110,7 @@ $(document).ready(function () {
     //     // console.log(questions[i]);
 
     // }
-})
+)
 
     // How do I make the start quiz btn take me to the first question?
     // How do I get the first question to appear without showing answers?
