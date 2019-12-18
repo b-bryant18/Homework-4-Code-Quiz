@@ -8,7 +8,7 @@ var answer1 = document.getElementById("answer1");
 var answer2 = document.getElementById("answer2");
 var answer3 = document.getElementById("answer3");
 var answer4 = document.getElementById("answer4");
-
+var answer
 // Questions 
 var questions = [
     {
@@ -37,7 +37,7 @@ var questions = [
         answer: "Bounty hunting"
     },
 ]
-    // Display functions
+// Display functions
 $(document).ready(function () {
     // questionPrompt.style.display = "none";
     // ending.style.display = "none";
@@ -49,21 +49,40 @@ $(document).ready(function () {
         questionPrompt.style.display = "block";
 
         questionTitle.textContent = questions[i].question;
-        answer1.textContent = questionns[0].choices[0];
+        answer1.textContent = questions[0].choices[0];
         answer2.textContent = questions[0].choices[1];
         answer3.textContent = questions[0].choices[2];
         answer4.textContent = questions[0].choices[3];
     });
 
-    for (var i = 0; i < questions.length; i ++) {
+    for (var i = 0; i < questions.length; i++) {
 
         var currentQuestion = questions[i];
         card.append("<h1>" + currentQuestion.title + "</h1>");
-        card.append("<button type='submit'>" +currentQuestion.choices[0] + "</button>")
-        card.append("<button type='submit'>" +currentQuestion.choices[1] + "</button>")
-        card.append("<button type='submit'>" +currentQuestion.choices[2] + "</button>")
-        card.append("<button type='submit'>" +currentQuestion.choices[3] + "</button>")
-    
+        card.append("<button type='submit'>" + currentQuestion.choices[0] + "</button>")
+        card.append("<button type='submit'>" + currentQuestion.choices[1] + "</button>")
+        card.append("<button type='submit'>" + currentQuestion.choices[2] + "</button>")
+        card.append("<button type='submit'>" + currentQuestion.choices[3] + "</button>")
+
+        //Functions for when correct answers are chosen by user.
+        function checkAnswer(answer) {
+            if (answer === questions[currentQuestion].correct) {
+                //answer is right
+                answerCorrect();
+            } else {
+                //answer is wrong
+                answerIncorrect();
+            }
+        }
+        // function answerCorrect() {
+        // alert("Correct")
+        // console.log(currentQuestion.answer);
+        // if (questions.title[0].choices === "Beskar");
+        // alert("Correct!");
+        // } else { 
+        //     alert("Incorrect!");
+        }
+
         // questionTitle.textContent = currentQuestion.title; 
         // console.log (currentQuestion);
 
@@ -71,7 +90,7 @@ $(document).ready(function () {
         // answer2.textContent = currentQuestion.choices[1];
         // answer3.textContent = currentQuestion.choices[2];
         // answer4.textContent = currentQuestion.choices[3];
-       
+
         // for (var j = 0; j <currentQuestion.choices.length; j ++) {
         //     console.log (currentQuestion.choices[j]);
         //     answer1.textContent = currentQuestion.choices[j];
