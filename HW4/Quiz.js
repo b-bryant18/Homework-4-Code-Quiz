@@ -8,8 +8,9 @@ var answer1 = document.getElementById("answer1");
 var answer2 = document.getElementById("answer2");
 var answer3 = document.getElementById("answer3");
 var answer4 = document.getElementById("answer4");
-var answer
-// Questions 
+var answer = 
+
+// Question and answer array
 var questions = [
     {
         title: "The Mandalorian's armor is made of what material?",
@@ -64,8 +65,8 @@ $(document).ready(function () {
         card.append("<button type='submit'>" + currentQuestion.choices[2] + "</button>")
         card.append("<button type='submit'>" + currentQuestion.choices[3] + "</button>")
 
-        //Functions for when correct answers are chosen by user.
-        function checkAnswer(choices) {
+        //Functionsfor checking whether user-chosen answers are correct or incorrect.
+        function checkAnswer(currentQuestion.choices) {
             if (answer === questions[currentQuestion].correct) {
                 //answer is right
                 answerCorrect();
@@ -113,4 +114,4 @@ $(document).ready(function () {
 )
 
     // How do I make the start quiz btn take me to the first question?
-    // How do I get the first question to appear without showing answers?
+   

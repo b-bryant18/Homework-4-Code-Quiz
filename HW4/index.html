@@ -1,105 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coding Quiz</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Josefin+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="Style.css">
-    <title>Quiz Challenge</title>
-
+    <link rel="stylesheet" href = "./assets/css/style.css" />
 </head>
-
 <body>
-    <div class="container">
-        <div class="Welcome">
+    <div class = "scores"><a href = "highscores.html">Click Here to View Highscores</a></div>
 
-            <div class="jumbotron">
-                <h1 class="display-4">The Mandalorian Quiz Challenge!</h1>
-                <p class="lead"> Try answering the following questions within the time limit. </p>
-                <hr class="my-4">
-                <p>Incorrect answers will reduce your score/time by ten seconds!</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Start Quiz</a>
-            </div>
+    <div class = "wrapper">
+        <div id="start-screen" class = "start">
+            <h1>The Mandalorian Coding Quiz</h1>
+            <p>
+                Test your knowledge of The Mandalorian. Answer the questions to the best of your ability.
+            </p>
+            <button id = "start">Start Quiz</button>
+        </div>
+        <div id ="questions" class="hide">
+            <h2 id="question-title"></h2>
+            <div id="choices" class ="choices"></div>
+        </div>
 
-            <div id="quiz-area">
-                
-            </div>
-        <!-- </div>
-        <div id="questionPrompt">
-        <h3 id="questionTitle"></h3>
-        <hr>
-        <button type="button" class="btn btn-primary" id="answer1"></button>
-        <button type="button" class="btn btn-primary" id="answer2"></button>
-        <button type="button" class="btn btn-primary" id="answer3"></button>
-        <button type="button" class="btn btn-primary" id="answer4"></button>
-        <hr>
-        </div> -->
-    </div>
-    <!-- <div id="ending">
-        <h3>Thanks for playing</h3>
-        <div id="quiz"></div>
-        <button id="submit">Submit Quiz</button>
-        <div id="results"></div>
-    </div> -->
+        <div id="end screen" class = "hide">
+            <h2>Quiz complete!</h2>
+            <p>Final score:<span id="final-score"></span>.</p>
+            <p>Enter your initials:<input type ="text" id ="initials" max="3" />
+                <button id="submit">Submit</button>
+            </p>
+        </div>
+
+        <div id="feedback" class = "feedback hide"></div>
+        <!-- close wrapper -->
     </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script type="text/javascript">
-
-    </script>
-    <script src="Quiz.js"></script>
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
 </body>
-
 </html>
-
-<!-- Mr. Scott's Office hours notes -->
-
-<!-- var roundTime = 5000;
-
-var activeQuestion;
-var countdownId;
-function startGame () {
-    activeQuestion = someQuestions [Math.floor(Math.random() * someQuestions)]
-    activeQuestion = someQuestions[0];
-    $("#question").text(activeQuestion.q);
-    countdownId = setTimeout(function () {
-        alert ("Time's up");
-        if (activeQuestion.a === "t") {
-            alert("That was true");
-        else
-            alert("That was false");
-        }
-        window.location.reload();
-    }, roundTime)
-}
-
-function answerTrue() {
-    clearTimeout(countdownId);
-    alert("That's true");
-    console.log(activeQuestion.a);
-    if (activeQuestion.a === "t");
-}   else {
-    alert("That's correct");
-}
-    index++;
-    startGame(0;)
-}
-
-
-
-startGame (); -->
