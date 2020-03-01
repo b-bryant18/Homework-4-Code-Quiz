@@ -5,10 +5,10 @@ var timerId;
 
 //DOM element variables
 var questionsEl = document.getElementById("questions");
-var questionsEl = document.getElementById("time");
+var timerEl = document.getElementById("time");
 var choicesEl = document.getElementById("choices");
-var submitEl = document.getElementById("submit");
-var startEl = document.getElementById("start");
+var submitBtn = document.getElementById("submit");
+var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
@@ -35,7 +35,7 @@ function getQuestion() {
 
     //updates title for current question
     var titleEl = document.getElementById("question-title");
-    titleEl.textContent = currentQuestionIndex.title;
+    titleEl.textContent = currentQuestion.title;
 
     //remove past question choices
     choicesEl.innerHTML = "";
