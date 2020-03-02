@@ -11,5 +11,10 @@ Click "Start Quiz" to begin playing.
 Click "View Highscores" to compare your scores with other players.
 ```
 
+![HomePage](assets/images/home.png)
+![Highscores](assets/images/score.png)
+![Question](assets/images/question.png)
+
+
 ## License
 Brad Bryant 2020
