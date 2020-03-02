@@ -1,8 +1,15 @@
-Web APIs: Code Quiz
+# The Mandalorian Trivia Game
+Test your knowledge of The Mandalorian with this exciting trivia game that you can play in your browser!
 
-![Welcome page to Web APIs: Code Quiz] (HW4/Screen Shot 2019-12-17 at 11.24.29 PM.png "Welcome Page") 
+## Usage
 
-This assignment is consists of a welcome page with instructions on how the quiz works. There is a button to begin the quiz below the instructions. Once the quiz has started the user will choose the correct answer to the multiple choice trivia questions. 
-I created this quiz using HTML, CSS, Javascript, and jQuery. 
+```python
+Right click index.html and use "open in default browser".
 
-Click this link to view my quiz. https://github.com/b-bryant18/Homework-4-Code-Quiz.git
+Click "Start Quiz" to begin playing.
+
+Click "View Highscores" to compare your scores with other players.
+```
+
+## License
+Brad Bryant 2020
