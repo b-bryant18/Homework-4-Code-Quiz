@@ -123,7 +123,7 @@ function saveHighScore() {
     //get value of intials input 
     var initials = initialsEl.value.trim();
 
-    //check to see if input value is empty
+    //check to see if input value is not empty
     if (initials !== "") {
         //pull saved scores from local storage (if none, set to empty array)
         var highscores =

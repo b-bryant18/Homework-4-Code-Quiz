@@ -11,7 +11,8 @@ function printHighScores () {
         //create li tag for each highscore
         var liTag = document.createElement("li");
         liTag.textContent = score.initials + " - " + score.score;
-
+        
+        //display scores on page
         var olEl = document.getElementById("highscores");
         olEl.appendChild(liTag);
     });
@@ -22,7 +23,7 @@ function clearHighScores () {
     window.location.reload();
 }
 
-document.getElementById("clear").onClick = clearHighScores;
+document.getElementById("clear").onclick = clearHighScores;
 
 //run function when page loads
 printHighScores();
